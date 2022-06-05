@@ -142,8 +142,7 @@ a {
     padding: 0;
     margin: 16px 0;
     height: 70vh;
-    overflow-y: hidden;
-    scrollbar-width: none; /* Firefox */
+    overflow-y: auto;
 }
 
 .notes-list::-webkit-scrollbar {

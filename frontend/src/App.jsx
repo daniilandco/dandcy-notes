@@ -1,5 +1,5 @@
 import './App.css'
-import UserNotesPage from "./pages/UserNotesPage"
+import NotesPage from "./pages/NotesPage"
 import {BrowserRouter as Router, Route, Routes} from "react-router-dom"
 import NoteModal from "./modal/NoteModal"
 import RegisterPage from "./pages/RegisterPage";
@@ -12,7 +12,7 @@ function App() {
         <AuthProvider>
             <Router>
                 <Routes>
-                    <Route path="/notes" element={<NeedHeaderComponent Component={UserNotesPage}/>}/>
+                    <Route path="/notes" element={<NeedHeaderComponent Component={NotesPage}/>}/>
                     <Route path="/notes/:id" element={<NeedHeaderComponent Component={NoteModal}/>}/>
                     <Route path="/register" element={<RegisterPage/>}/>
                     <Route path="/login" element={<LoginPage/>}/>
