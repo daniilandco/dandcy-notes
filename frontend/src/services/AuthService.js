@@ -1,7 +1,6 @@
 import $api from "../http"
 
 class AuthService {
-    static CRED_ITEM = 'user'
 
     static async login(username, password) {
         try {

@@ -81,9 +81,9 @@ const Note = () => {
                 }
 
             </div>
-            <input maxLength={ValidationUtils.EDIT_TITLE_MAX_LENGTH} onChange={onTitleChange} className="textarea-title"
+            <input placeholder={'Title'} maxLength={ValidationUtils.EDIT_TITLE_MAX_LENGTH} onChange={onTitleChange} className="textarea-title"
                    value={note?.title}/>
-            <textarea maxLength={ValidationUtils.EDIT_CONTENT_MAX_LENGTH} onChange={onContentChange}
+            <textarea placeholder={'Content'} maxLength={ValidationUtils.EDIT_CONTENT_MAX_LENGTH} onChange={onContentChange}
                       className="textarea-content" value={note?.content}/>
         </div>
     )
