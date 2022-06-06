@@ -12,6 +12,7 @@ function App() {
         <AuthProvider>
             <Router>
                 <Routes>
+                    <Route index element={<LoginPage />} />
                     <Route path="/notes" element={<NeedHeaderComponent Component={NotesPage}/>}/>
                     <Route path="/notes/:id" element={<NeedHeaderComponent Component={NoteModal}/>}/>
                     <Route path="/register" element={<RegisterPage/>}/>
