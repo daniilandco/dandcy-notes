@@ -1,8 +1,8 @@
-from django.urls import path, include, re_path
+from django.urls import path
 from djoser.views import UserViewSet
 
 from .views import AdminNoteListView, NoteCreateView, NoteRetrieveView, NoteUpdateView, NoteDeleteView, \
-    UserNoteListView, CustomObtainAuthToken, Logout
+    UserNoteListView, CustomObtainAuthToken, Logout, NotesDeleteView
 
 urlpatterns = [
     path('auth/users/', UserViewSet.as_view({'post': 'create'}), name='register'),
@@ -17,4 +17,6 @@ urlpatterns = [
     path('notes/<int:pk>/', NoteRetrieveView.as_view(), name='get_note'),
     path('notes/<int:pk>/update/', NoteUpdateView.as_view(), name='update_note'),
     path('notes/<int:pk>/delete/', NoteDeleteView.as_view(), name='delete_note'),
+
+    path('notes/delete/', NotesDeleteView.as_view(), name='delete_notes'),
 ]
