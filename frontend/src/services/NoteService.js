@@ -38,6 +38,11 @@ class NoteService {
         return await response.data
     }
 
+    static async deleteNotes(noteIDs) {
+        const response = await $api.post(`notes/delete/`, {ids: noteIDs})
+        return await response.data
+    }
+
 }
 
 

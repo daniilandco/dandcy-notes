@@ -24,10 +24,20 @@ const NotesPage = () => {
         setNotes(await notes)
     }
 
+
+    const handleClear = async (e) => {
+        e.preventDefault()
+
+        const ids = notes.map(note => note.id)
+        await NoteService.deleteNotes(ids)
+        setNotes([])
+    }
+
     return (
         <div className="notes">
             <div className="notes-header">
                 <h2 className="notes-title">&#9782; Notes</h2>
+                <p onClick={handleClear} className="notes-delete">Clear all notes</p>
                 <p className="notes-count">{notes.length}</p>
             </div>
 

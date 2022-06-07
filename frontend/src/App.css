@@ -132,11 +132,19 @@ a {
     font-weight: 600;
 }
 
+.notes-delete {
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.notes-delete:hover {
+    color: var(--color-dark);
+}
+
 .notes-count {
     font-size: 18px;
     color: var(--color-gray);
 }
-
 
 .notes-list {
     padding: 0;

@@ -2,7 +2,7 @@ import React, {useEffect, useState} from "react"
 import NoteService from "../services/NoteService"
 import {useNavigate, useParams} from "react-router-dom"
 import {ReactComponent as ArrowLeft} from "../assets/arrow-left.svg"
-import ValidationUtils from "../utils/ValidationUtils";
+import ValidationUtils from "../utils/ValidationUtils"
 
 const Note = () => {
 
