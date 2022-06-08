@@ -1,3 +1,3 @@
-release: python dandcynotes/manage.py migrate
-web: gunicorn dandcynotes.dandcynotes.wsgi
+release: python manage.py migrate
+web: gunicorn dandcynotes.wsgi
 
