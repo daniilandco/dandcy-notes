@@ -1,2 +1,2 @@
-release: python manage.py migrate
-web: gunicorn dandcynotes.wsgi --log-file
+release: python dandcynotes/manage.py migrate
+web: gunicorn dandcynotes.dandcynotes.wsgi --log-file
