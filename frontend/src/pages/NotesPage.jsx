@@ -28,7 +28,7 @@ const NotesPage = () => {
     const handleClear = async (e) => {
         e.preventDefault()
 
-        const ids = notes.map(note => note.id)
+        const ids = notes?.map(note => note.id)
         await NoteService.deleteNotes(ids)
         setNotes([])
     }
