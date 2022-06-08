@@ -1,0 +1,27 @@
+version: '3'
+
+services:
+  web:
+    restart: always
+    build: .
+    command: python dandcynotes/manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/code
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    environment:
+      POSTGRES_PASSWORD: root
+      POSTGRES_USER: postgres
+      POSTGRES_NAME: dandcy_db
+  db:
+    image: postgres
+    expose:
+      - "5432"
+    environment:
+      POSTGRES_PASSWORD: root
+      POSTGRES_USER: postgres
+      POSTGRES_NAME: dandcy_db
+
+    

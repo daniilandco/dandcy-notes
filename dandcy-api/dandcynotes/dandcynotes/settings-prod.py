@@ -22,7 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-n4yf)0)vrj8b+88io6w&b8l$5+^(#gw6#50j#uyll)p5h_11+r'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -79,10 +79,10 @@ WSGI_APPLICATION = 'dandcynotes.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'dandcy_db',
-        'USER': 'postgres',
-        'PASSWORD': 'root',
-        'HOST': 'db',
+        'NAME': 'd27vl0jsa72m55',
+        'USER': 'jcnspecasdhvrd',
+        'PASSWORD': '946a7e097433402628578ba3d819f31cb3b20f7e1341d533f5d5c45c1d9febab',
+        'HOST': 'ec2-3-248-121-12.eu-west-1.compute.amazonaws.com',
         'PORT': 5432,
     }
 }
@@ -120,6 +120,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = 'static/'
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
