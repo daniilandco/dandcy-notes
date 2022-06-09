@@ -40,11 +40,6 @@ class AccountTests(APITestCase):
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(len(response.data), 0)
 
-    # def test_get_notes_admin_authorized(self):
-    #     self.authenticate(True)
-    #
-    #     response = self.client.get(reverse('admin_notes'), format='json')
-    #     self.assertEqual(response.status_code, status.HTTP_200_OK)
 
     def test_create_note(self):
         self.authenticate()
